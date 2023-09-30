@@ -58,4 +58,9 @@ window.addEventListener('DOMContentLoaded', event => {
                     interval: 500// Change this value to set the slideshow interval in milliseconds (e.g., 3000 = 3 seconds)
                 });
             });
-     
+            // JavaScript to convert JPG to webp
+            const jpgImages = document.querySelectorAll('img[src*=".jpg"]');
+            jpgImages.forEach((img) => {
+                const webpSrc = img.src.replace('.jpg', '.webp');
+                img.src = webpSrc;
+            });
